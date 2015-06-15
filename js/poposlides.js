@@ -1,6 +1,6 @@
 /*
  * poposliders - v1.0.0 - 2015-06-10
- * http://po-po.github.io/poposlides/
+ * http://po-po.github.io/
  *
  * Copyright (c) 2015 popo;
  * Licensed under the MIT license
