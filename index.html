@@ -2,12 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>popslides</title>
     <link href="css/poposlides.css" rel="stylesheet" >
     <style>
         .s1{
             position: fixed;
-            z-index: 999;
+            z-index: 10;
             left: 50%;
             top: 50%;
             margin: -150px 0 0 -250px;
@@ -47,6 +48,16 @@
         }
         .s1 a:hover{
             background: #ed6f5c;
+        }
+        @media (max-width:480px){
+            .s1{
+                margin: -127px 0 0 0;
+                width: 80%;
+                height: 255px;
+                left: 10%;
+            }
+            .s1 p{font-size: 36px;}
+            .s1 span{font-size: 18px;}
         }
     </style>
 </head>
