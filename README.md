@@ -1,5 +1,5 @@
 # poposlides
-#####poposlides是一个用Jquery写的一个轮播插件，大小仅5KB
+#####poposlides是一个Jquery轮播插件，大小仅5KB
 
 ##使用参数
 #####
