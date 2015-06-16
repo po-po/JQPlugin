@@ -48,6 +48,7 @@
 					"z-index":"9"
 				});
 			};
+			
             //显示当前页
             slideFadeIn = function(){
 				if(!navigator.userAgent.match(/mobile/i)){
