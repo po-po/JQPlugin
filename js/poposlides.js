@@ -31,23 +31,44 @@
                 next = settings.next;
 
             //初始隐藏其它页，显示当前页
-            slide.css({
-                "z-index":"0",
-                "display":"none"
-            });
-            slide.eq(index).css({
-                "z-index":"9",
-                "display":"block"
-            });
-
+			if(!navigator.userAgent.match(/mobile/i)){
+				slide.fadeOut(settings.fadespeed).css({
+					"z-index":"0"
+				});
+				slide.eq(index).fadeIn(settings.fadespeed).css({
+					"z-index":"9"
+				});
+			}else{
+				slide.css({
+					"opacity":"0",
+					"z-index":"0"
+				});
+				slide.eq(index).css({
+					"opacity":"1",
+					"z-index":"9"
+				});
+			};
             //显示当前页
             slideFadeIn = function(){
-            	slide.fadeOut(settings.fadespeed).css({
-        			"z-index":"0"
-        		});
-        		slide.eq(index).fadeIn(settings.fadespeed).css({
-        			"z-index":"9"
-        		});
+				if(!navigator.userAgent.match(/mobile/i)){
+					slide.fadeOut(settings.fadespeed).css({
+						"z-index":"0"
+					});
+					slide.eq(index).fadeIn(settings.fadespeed).css({
+						"z-index":"9"
+					});
+				}else{
+					slide.css({
+						"opacity":"0",
+						"z-index":"0",
+						"-webkit-transition": settings.fadespeed/1000+"s"
+					});
+					slide.eq(index).css({
+						"opacity":"1",
+						"z-index":"9",
+						"-webkit-transition": settings.fadespeed/1000+"s"
+					});
+				};
             };
 
             //翻页加，判断是否循环
