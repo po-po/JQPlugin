@@ -106,11 +106,11 @@
 							 "<a href='javascript:void(0)' class="+ next.substring(1) +"></a>";
 				$this.after(navStr);
 
-                $(next).mousedown(function(){
+                $(next).click(function(){
                 	slideAdd();
                 });
 
-                $(prev).mousedown(function(){
+                $(prev).click(function(){
                 	slideMinus();
                 })
 			};
@@ -118,10 +118,10 @@
 			//是否需要页码
 			if(settings.pagination) {
 				pagnation();
-				$(prev).mousedown(function(){ pageActive();});
-				$(next).mousedown(function(){ pageActive();});
+				$(prev).click(function(){ pageActive();});
+				$(next).click(function(){ pageActive();});
 
-                $(".pagination li").mousedown(function(){
+                $(".pagination li").click(function(){
                 	var idx = $(this).index()-1;
                 	index = idx;
                 	slideAdd();
