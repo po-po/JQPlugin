@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <title>HTML5测试</title>
+    <style>
+        img{
+            width: 100%;
+        }
+    </style>
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var startX, startY, endX, endY;
+            var showADID = 1;
+            document.getElementById("divADBox").addEventListener("touchstart", touchStart, false);
+            document.getElementById("divADBox").addEventListener("touchmove", touchMove, false);
+            document.getElementById("divADBox").addEventListener("touchend", touchEnd, false);
+            function touchStart(event) {
+                var touch = event.touches[0];
+                startY = touch.pageY;
+                startX = touch.pageX;
+            }
+            function touchMove(event) {
+                var touch = event.touches[0];
+                //endY = (startY - touch.pageY);
+                endX = touch.pageX;
+            }
+            function touchEnd(event) {
+                $("#img0" + showADID).hide();
+                showADID++;
+                if (showADID > 4) {
+                    showADID = 1;
+                }
+                if ((startX - endX) > 100) {
+                    $("#img0" + showADID).show();
+                }
+                $("#spText").html("X轴移动大小：" + (startX - endX));
+            }
+        })
+    </script>
+</head>
+<body >
+<form id="form1">
+    <div style="border:solid 1px Red;" id="divADBox">
+        <span id="spText">X轴移动大小：0</span>
+        <img id="img01" src="http://localhost:63342/po-po.github.io/images/pic-1.jpg"  />
+        <img id="img02" src="http://localhost:63342/po-po.github.io/images/pic-2.jpg" style="display:none;" />
+        <img id="img03" src="http://localhost:63342/po-po.github.io/images/pic-3.jpg" style="display:none;" />
+        <img id="img04" src="http://localhost:63342/po-po.github.io/images/pic-4.jpg" style="display:none;" />
+    </div>
+</form>
+</body>
+</html>

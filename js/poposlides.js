@@ -32,41 +32,29 @@
 
             //初始隐藏其它页，显示当前页
 			if(!navigator.userAgent.match(/mobile/i)){
-				slide.fadeOut(settings.fadespeed).css({
-					"z-index":"0"
-				});
-				slide.eq(index).fadeIn(settings.fadespeed).css({
-					"z-index":"9"
-				});
+				slide.hide();
+				slide.eq(index).show();
 			}else{
 				slide.css({
-					"opacity":"0",
-					"z-index":"0"
+					"opacity":"0"
 				});
 				slide.eq(index).css({
-					"opacity":"1",
-					"z-index":"9"
+					"opacity":"1"
 				});
 			};
-			
+
             //显示当前页
             slideFadeIn = function(){
 				if(!navigator.userAgent.match(/mobile/i)){
-					slide.fadeOut(settings.fadespeed).css({
-						"z-index":"0"
-					});
-					slide.eq(index).fadeIn(settings.fadespeed).css({
-						"z-index":"9"
-					});
+					slide.fadeOut(settings.fadespeed);
+					slide.eq(index).fadeIn(settings.fadespeed);
 				}else{
 					slide.css({
 						"opacity":"0",
-						"z-index":"0",
 						"-webkit-transition": settings.fadespeed/1000+"s"
 					});
 					slide.eq(index).css({
 						"opacity":"1",
-						"z-index":"9",
 						"-webkit-transition": settings.fadespeed/1000+"s"
 					});
 				};
@@ -118,11 +106,11 @@
 							 "<a href='javascript:void(0)' class="+ next.substring(1) +"></a>";
 				$this.after(navStr);
 
-                $(next).click(function(){
+                $(next).mousedown(function(){
                 	slideAdd();
                 });
 
-                $(prev).click(function(){
+                $(prev).mousedown(function(){
                 	slideMinus();
                 })
 			};
@@ -130,10 +118,10 @@
 			//是否需要页码
 			if(settings.pagination) {
 				pagnation();
-				$(prev).click(function(){ pageActive();});
-				$(next).click(function(){ pageActive();});
+				$(prev).mousedown(function(){ pageActive();});
+				$(next).mousedown(function(){ pageActive();});
 
-                $(".pagination li").click(function(){
+                $(".pagination li").mousedown(function(){
                 	var idx = $(this).index()-1;
                 	index = idx;
                 	slideAdd();
