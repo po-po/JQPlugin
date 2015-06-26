@@ -1,5 +1,5 @@
 /*
- * poposliders - v1.0.0 - 2015-06-10
+ * poposliders - v1.1.0 - 2015-06-10
  * http://po-po.github.io/
  *
  * Copyright (c) 2015 popo;
@@ -16,6 +16,7 @@
             loop:true,             //循环播放
             pagination:true,       //页码显示
 			pagecenter:true,       //页码居中
+			trigger:"click",       //页面触发类型click/mouseover
             prev:".prev",          //上一页按钮
             next:".next"           //下一页按钮
             }, options);
@@ -112,7 +113,7 @@
 
                 $(prev).click(function(){
                 	slideMinus();
-                })
+                });
 			};
 
 			//是否需要页码
@@ -120,12 +121,20 @@
 				pagnation();
 				$(prev).click(function(){ pageActive();});
 				$(next).click(function(){ pageActive();});
-
-                $(".pagination li").click(function(){
-                	var idx = $(this).index()-1;
-                	index = idx;
-                	slideAdd();
-                	pageActive();
+                $(".pagination li").each(function(){
+					var count = 0;
+					$(".pagination li").not($(this)).on(settings.trigger,function(){
+						count = 0;
+					})
+					$(this).on(settings.trigger,function(){
+						count++;
+						var idx = $(this).index()-1;
+						if(count==1){
+							index = idx;
+							slideAdd();
+							pageActive();
+						};
+					});
                 });
 			};
 
