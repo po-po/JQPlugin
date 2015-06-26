@@ -10,6 +10,6 @@
             loop:true,             //循环播放
             pagination:true,       //页码显示
             pagecenter:true,       //页码居中
-            trigger:"click",       //页面触发类型click/mouseover
+            trigger:"click",       //页面触发类型click/mouseover 
             prev:".prev",          //上一页按钮
             next:".next"           //下一页按钮
