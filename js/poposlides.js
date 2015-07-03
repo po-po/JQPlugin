@@ -140,13 +140,13 @@
 
             //页码居中
             if (settings.pagecenter) {
-                var pw = $(".pagination").width();
-                $(".pagination").css({
-                    "position": "absolute",
+                var pw = $(".pagination").outerWidth();
+                    $(".pagination").css({
+                        "position": "absolute",
                     "left": "50%",
+                    "z-index": "99",
                     "bottom": "5px",
-                    "margin-left": -pw / 2,
-                    "z-index": "99"
+                    "margin": "0 0 0" + (-pw / 2) ,
                 })
             };
 
@@ -158,13 +158,12 @@
                 }, settings.playspeed);
                 $this.nextAll().hover(function () {
                     clearInterval(play);
-                },
-		        function () {
-		            play = setInterval(function () {
-		                slideAdd();
-		                pageActive();
-		            }, settings.playspeed);
-		        });
+                    },function () {
+                        play = setInterval(function () {
+                        slideAdd();
+                        pageActive();
+                    }, settings.playspeed);
+                });
             };
 
         });
