@@ -146,7 +146,7 @@
                     "left": "50%",
                     "z-index": "99",
                     "bottom": "5px",
-                    "margin": "0 0 0" + (-pw / 2) ,
+                    "margin-left": (-pw / 2)
                 })
             };
 
