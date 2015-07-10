@@ -121,6 +121,9 @@
                 pagnation();
                 $(prev).click(function () { pageActive(); });
                 $(next).click(function () { pageActive(); });
+                if(settings.trigger=="hover"){
+                    settings.trigger="mouseover";
+                };
                 $(".pagination li").each(function () {
                     var count = 0;
                     $(".pagination li").not($(this)).on(settings.trigger, function () {
