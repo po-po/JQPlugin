@@ -1,0 +1,131 @@
+body{
+    background: #333;
+    font-family: "microsoft yahei","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+.content{
+    position: relative;
+    margin: auto;
+    width: 680px;
+    height: 100%;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    margin-top: -295px;
+    width: 350px;
+    height: 590px;
+    background: #000;
+    background-size: cover;
+    border-radius: 25px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,.5);
+}
+.box:before{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -35px;
+    width: 70px;
+    height: 5px;
+    border-radius: 5px;
+    background: #e5e5e5;
+}
+.box:after{
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -37px;
+    width: 70px;
+    height: 30px;
+    border-radius: 30px;
+    background: #0E0D0D;
+    border: solid 4px #232222;
+}
+.box .screen{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -160px;
+    width: 320px;
+    height: 480px;
+    background: #f5f5f5;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.box .screen .t0{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: solid 1px #e5e5e5;
+    background: #5ac8fa;color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+.box .screen .t1{
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.box .screen .t2{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #999;
+    height: 35px;
+    text-shadow: 1px 1px 0 rgba(255,255,255,1);
+
+}
+.box .screen input{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    text-align: center;
+    background: #fff;
+    border: none;
+    border-top: solid 1px #e5e5e5;
+    border-bottom: solid 1px #e5e5e5;
+    outline: none;
+}
+.codebox{
+    position: absolute;
+    top: 50%;
+    left: 400px;
+    margin-top: -295px;
+    width: 340px;
+    height: 590px;
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.7);
+}
+.codebox .p1{
+    padding: 15px 0;
+    margin: 25px 0;
+    font-size: 18px;
+    color: #5ac8fa;
+    border-bottom: dotted 1px #5ac8fa;
+}
+.codebox .code p{
+    font-size: 16px;
+    line-height: 22px;
+    font-family: Arial;
+}
+.codebox .t1{
+    margin: 15px 0 10px;
+    font-size: 16px;
+    color: #5ac8fa;
+}
+.codebox .btn{
+    margin-top: 25px;
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #5ac8fa;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 3px;
+}

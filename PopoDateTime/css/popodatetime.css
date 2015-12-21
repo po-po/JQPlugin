@@ -1,0 +1,194 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+body,ul,p{
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.popodatetime{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue",Helvetica,sans-serif;
+    font-size: 17px;
+    color: #666;
+    z-index: 999999;
+}
+.popodatetime>*{
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+.popodatetime .cover{
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    -webkit-animation:fadeIn linear .5s both;
+}
+.popodatetime .main{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    animation:fadeInUp ease .5s both;
+    -webkit-animation:fadeInUp ease .5s both;
+    z-index: 1;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+}
+.popodatetime.close .cover{
+    animation:fadeOut linear .5s both;
+    -webkit-animation:fadeOut linear .5s both;
+}
+.popodatetime.close .main{
+    animation:fadeInDown ease .5s both;
+    -webkit-animation:fadeInDown ease .5s both;
+}
+@-webkit-keyframes fadeIn{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+@-webkit-keyframes fadeInUp{
+    0%{-webkit-transform:translateY(500px);}
+    100%{-webkit-transform:translateY(0);}
+}
+@keyframes fadeIn{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+@keyframes fadeInUp{
+    0%{-webkit-transform:translateY(500px);}
+    100%{-webkit-transform:translateY(0);}
+}
+@-webkit-keyframes fadeOut{
+    0%{opacity:1;  }
+    100%{opacity:0;display: none;}
+}
+@-webkit-keyframes fadeInDown{
+    0%{-webkit-transform:translateY(0);}
+    100%{-webkit-transform:translateY(500px)}
+}
+@keyframes fadeOut{
+    0%{opacity:1; }
+    100%{opacity:0;}
+}
+@keyframes fadeInDown{
+    0%{-webkit-transform:translateY(0);}
+    100%{-webkit-transform:translateY(500px);}
+}
+.popodatetime .main .scroll{
+    position: relative;
+    margin: 0 10px;
+    height: 135px;
+    background:#fff;
+}
+.popodatetime .main .scroll:before{
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background: #f1f1f1;
+    pointer-events: none;
+}
+.popodatetime .main .scroll:after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+    content: '';
+    border: solid 1px #ddd;
+    transform: scale(.5);
+    -webkit-transform: scale(.5);
+    transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+    pointer-events: none;
+}
+.popodatetime .main .datetime{
+    overflow: hidden;
+    box-shadow: 0 -5px 5px rgba(0,0,0,.1);
+}
+.popodatetime .main .datetime .result{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    /*border-bottom: solid 2px #e5e5e5;*/
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+.popodatetime .main .datetime .title{
+    margin: 0 10px;
+    overflow: hidden;
+}
+.popodatetime .main .datetime .title li{
+    margin: 10px auto;
+    width: 20%;
+    color: #999;
+    text-align: center;
+    list-style-type: none;
+    float: left;
+}
+.popodatetime .main .datetime-1 .title li{
+    width: 50%;
+}
+.popodatetime .main .datetime .swiper-container{
+    position: relative;
+    z-index: 1;
+    width: 20%;
+    height: 135px !important;
+    float: left;
+}
+.popodatetime .main .datetime .swiper-container:nth-child(4):after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    content: '';
+    border-right: solid 1px #ddd;
+    -webkit-transform: scaleX(.5);
+    transform: scaleX(.5);
+}
+.popodatetime .swiper-slide {
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+}
+.popodatetime .button{
+    margin: 10px;
+    overflow: hidden;
+}
+.popodatetime .button a{
+    display: block;
+    width: calc(50% - 5px);
+    width: -webkit-calc(50% - 5px);
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background: #5ac8fa;
+    float: left;
+}
+.popodatetime .button a:last-child{
+    background: #ccc;
+    float: right;
+}
+
+.popodatetime .mode-1 .datetime .title li,
+.popodatetime .mode-1 .datetime .swiper-container{
+    width: 33.333333%;
+}
+.popodatetime .mode-2 .datetime .title li,
+.popodatetime .mode-2 .datetime .swiper-container{
+    width: 50%;
+}
