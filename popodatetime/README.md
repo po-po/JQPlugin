@@ -1,6 +1,8 @@
 # popodatetime
 #####popodatetime移动端日期时间选择控件
 
+##[DEMO](http://po-po.github.io/popodatetime/)
+
 ##使用方法
 ```javascript
 //日期时间选择

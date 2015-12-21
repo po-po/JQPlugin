@@ -1,6 +1,8 @@
 # poposlides
 #####poposlides是一个Jquery轮播插件，大小仅5KB
 
+##[DEMO](http://po-po.github.io/poposlides/)
+
 ##使用参数
 ```javascript
 auto:true,             //自动播放
