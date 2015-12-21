@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>popslides</title>
+    <link href="css/poposlides.css" rel="stylesheet">
+    <style>
+        .s1 {
+            position: absolute;
+            z-index: 10;
+            left: 50%;
+            top: 50%;
+            margin: -150px 0 0 -250px;
+            width: 500px;
+            height: 300px;
+            background: #fff;
+            background: rgba(255, 255, 255, .7);
+            box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+            filter:alpha(opacity=80);
+        }
+
+        .s1 p {
+            margin: 0;
+            padding: 50px 0 20px 0;
+            font-family: Arial;
+            font-size: 60px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .s1 span {
+            display: block;
+            font-family: Arial;
+            font-size: 25px;
+            color: #666;
+            text-align: center;
+        }
+
+        .s1 a {
+            margin: 20px auto 0 auto;
+            display: block;
+            width: 220px;
+            height: 50px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-family: Arial;
+            font-size: 25px;
+            background: #f88371;
+        }
+
+        .s1 a:hover {
+            background: #ed6f5c;
+        }
+
+        @media (max-width: 480px) {
+            .s1 {
+                margin: -127px 0 0 0;
+                width: 80%;
+                height: 255px;
+                left: 10%;
+            }
+
+            .s1 p {
+                font-size: 36px;
+            }
+
+            .s1 span {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="s1">
+    <p>POPOSLIDES</p>
+    <span>MAINTAINED BY POPO</span>
+    <a href="https://codeload.github.com/po-po/po-po.github.io/zip/master">Download ZIP</a>
+</div>
+<div class="slides-box">
+    <ul class="slides">
+        <li style="background: url('images/pic-1.jpg') center"></li>
+        <li style="background: url('images/pic-2.jpg') center"></li>
+        <li style="background: url('images/pic-3.jpg') center"></li>
+        <li style="background: url('images/pic-4.jpg') center"></li>
+        <li style="background: url('images/pic-5.jpg') center"></li>
+    </ul>
+</div>
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+<script src="js/poposlides.js"></script>
+<script>
+    $(".slides").poposlides({});
+</script>
+</body>
+</html>
