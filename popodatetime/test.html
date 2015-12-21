@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title></title>
+    <style>
+        #inp{
+            position:absolute;
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<div id="inp"></div>
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+<script>
+
+$(function(){
+    var obj = document.getElementById('inp');
+    var tStart,tMove,tEnd;
+    obj.addEventListener('touchstart', function(event) {
+        event.preventDefault();
+        tStart = event.targetTouches[0].pageX;
+    }, false);
+    obj.addEventListener('touchmove', function(event) {
+        if (event.targetTouches.length == 1) {
+            event.preventDefault();
+            tMove = event.targetTouches[0].pageX;
+            console.log(tMove);
+            if(tMove-tStart>tMove/2){
+                alert("adsf")
+            }
+        }
+    }, false);
+    obj.addEventListener('touchend', function(event) {
+        if (event.targetTouches.length == 1) {
+            event.preventDefault();
+            var end = event.targetTouches[0];
+        }
+    }, false);
+});
+</script>
+</body>
+</html>
