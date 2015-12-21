@@ -20,7 +20,7 @@ next:".next"           //下一页按钮
 # popodatetime
 #####popodatetime移动端日期时间选择控件
 
-#####查看演示：[http://po-po.github.io/poposlides/](http://po-po.github.io/poposlides/)
+#####查看演示：[http://po-po.github.io/popodatetime/](http://po-po.github.io/popodatetime/)
 
 ##使用方法
 ```javascript
