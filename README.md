@@ -1,7 +1,7 @@
 # poposlides
 #####poposlides是一个Jquery轮播插件，大小仅5KB
 
-##[DEMO](http://po-po.github.io/poposlides/)
+#####查看演示：[http://po-po.github.io/poposlides/](http://po-po.github.io/poposlides/)
 
 ##使用参数
 ```javascript
@@ -20,7 +20,7 @@ next:".next"           //下一页按钮
 # popodatetime
 #####popodatetime移动端日期时间选择控件
 
-##[DEMO](http://po-po.github.io/poposlides/)
+#####查看演示：[http://po-po.github.io/poposlides/](http://po-po.github.io/poposlides/)
 
 ##使用方法
 ```javascript
