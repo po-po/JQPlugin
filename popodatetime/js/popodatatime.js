@@ -153,6 +153,7 @@
                     spaceBetween: 0,
                     centeredSlides: true,
                     direction: 'vertical',
+                    mousewheelControl : true,
                     onInit: function(swiper){
                         swiper.appendSlide(yearStr());
                     },
@@ -165,6 +166,7 @@
                     spaceBetween: 0,
                     centeredSlides: true,
                     direction: 'vertical',
+                    mousewheelControl : true,
                     onInit: function(swiper){
                         swiper.appendSlide(monthStr());
                     },
@@ -177,6 +179,7 @@
                     spaceBetween: 0,
                     centeredSlides: true,
                     direction: 'vertical',
+                    mousewheelControl : true,
                     onInit: function(swiper){
                         swiper.appendSlide(dayStr());
                     },
@@ -235,6 +238,7 @@
                     spaceBetween: 0,
                     centeredSlides: true,
                     direction: 'vertical',
+                    mousewheelControl : true,
                     onInit: function(swiper){
                         swiper.appendSlide(hourStr());
                     },
@@ -247,6 +251,7 @@
                     spaceBetween: 0,
                     centeredSlides: true,
                     direction: 'vertical',
+                    mousewheelControl : true,
                     onInit: function(swiper){
                         swiper.appendSlide(minuteStr());
                     },
