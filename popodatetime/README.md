@@ -2,7 +2,7 @@
 #####popodatetime移动端日期时间选择控件
 
 ##使用方法
-
+```javascript
 //日期时间选择
 $(".datetime-1").popodatetime({
   container: ".box .screen"
