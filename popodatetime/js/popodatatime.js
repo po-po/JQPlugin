@@ -189,7 +189,7 @@
                 });
 
                 //如果已经选择了日期时间则下次打开滚动到已选时间
-                if($this.val()!=""){
+                if($this.val()!="" && escape($this.val()).indexOf( "%u" )<0){
                     var str = String($this.val());
                     str=str.match(/\d+/g);
                     var arr = new Array();
@@ -365,7 +365,7 @@
                     hideDatetime();
                 });
                 $(".popodatetime .button .btn-1").click(function(){
-                   $this.val($(".result").attr("data-value"));
+                    $this.val($(".result").attr("data-value"));
                     hideDatetime();
                 });
             });
