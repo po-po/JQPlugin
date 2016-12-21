@@ -39,7 +39,14 @@ img {
 
 /*主体
 ******************************/
-.logo{display: none;}
+.logo{
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
 .swiper-container {
     margin: auto;
     max-width: 640px;
