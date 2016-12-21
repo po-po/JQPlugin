@@ -39,6 +39,7 @@ img {
 
 /*主体
 ******************************/
+.logo{display: none;}
 .swiper-container {
     margin: auto;
     max-width: 640px;
@@ -185,8 +186,6 @@ img {
 }
 .part-1 .g .p2{
     margin-top: .05rem;
-/*    font-size: .32rem;
-    font-weight: bold;*/
 }
 .part-2 .a{
     margin: .5rem auto .1rem auto;
