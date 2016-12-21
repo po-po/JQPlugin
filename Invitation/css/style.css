@@ -177,18 +177,16 @@ img {
     text-align: center;
 }
 .part-1 .g{
-    position: absolute;
-    left: 0;
-    bottom: .5rem;
-    width: 100%;
+    margin-top: .3rem;
 }
-.part-1 .g .p1 p{
-    padding: .02rem 0;
+.part-1 .g .p1{
+    font-size: .2rem;
+    font-weight: bold;
 }
 .part-1 .g .p2{
     margin-top: .05rem;
-    font-size: .32rem;
-    font-weight: bold;
+/*    font-size: .32rem;
+    font-weight: bold;*/
 }
 .part-2 .a{
     margin: .5rem auto .1rem auto;
@@ -230,15 +228,4 @@ img {
     height: .25rem;
     background: url("../images/icon-10.svg") no-repeat;
     background-size: 100% auto;
-}
-
-.snow{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    -webkit-transform: translate3d(0,0,0);
-    pointer-events: none;
 }
