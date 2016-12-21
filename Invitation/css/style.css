@@ -231,3 +231,14 @@ img {
     background: url("../images/icon-10.svg") no-repeat;
     background-size: 100% auto;
 }
+
+.snow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    -webkit-transform: translate3d(0,0,0);
+    pointer-events: none;
+}
