@@ -99,23 +99,23 @@ img {
 }*/
 .corner{
     position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
+    top: .1rem;
+    right: .1rem;
+    bottom: .1rem;
+    left: .1rem;
     pointer-events: none;
 }
 .corner i{
     position: absolute;
-    width: .85rem;
-    height: .85rem;
+    width: .7rem;
+    height: 1rem;
     background: url("../images/icon-05.svg") no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% auto;
 }
 .corner i:nth-child(1){
     top: 0;
     left: 0;
-    -webkit-transform: rotate(270deg);
+    -webkit-transform: rotateY(180deg);
 }
 .corner i:nth-child(2){
     top: 0;
@@ -124,7 +124,7 @@ img {
 .corner i:nth-child(3){
     bottom: 0;
     right: 0;
-    -webkit-transform: rotateX(-180deg);
+    -webkit-transform: rotateX(180deg);
 }
 .corner i:nth-child(4){
     bottom: 0;
