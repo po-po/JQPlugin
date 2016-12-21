@@ -8,7 +8,7 @@
     <link href="css/swiper.min.css" rel="stylesheet">
     <script>
         var t = new Date().valueOf();
-        document.write('<link href="css/style.css?'+ t +'" rel="stylesheet">')
+        document.write('<link href="css/style.css?' + t + '" rel="stylesheet">')
     </script>
 </head>
 <body>
@@ -52,37 +52,39 @@
             </div>
         </div>
     </div>
-    <a href="javascript:void(0)" class="sound play"><audio src="sound/music.mp3" autoplay="autoplay" preload="auto" loop="loop" id="sound"></audio></a>
+    <a href="javascript:void(0)" class="sound play">
+        <audio src="sound/music.mp3" autoplay="autoplay" preload="auto" loop="loop" id="sound"></audio>
+    </a>
     <a href="javascript:void(0)" class="arrow"></a>
 </div>
 <script src="js/jquery-2.1.3.min.js"></script>
 <script src="js/swiper.min.js"></script>
 <script>
-    $(function(){
+    $(function () {
 
         var swiper = new Swiper('.swiper-container', {
             direction: 'vertical',
-            onSlideChangeEnd: function(){
-                if(swiper.isEnd){
+            onSlideChangeEnd: function () {
+                if (swiper.isEnd) {
                     $(".arrow").hide();
-                }else{
+                } else {
                     $(".arrow").show();
                 }
             }
         });
-        $(".arrow").click(function(){
+        $(".arrow").click(function () {
             swiper.slideTo(1, 500, false);
         });
 
-        var flag=1;
-        $(".sound").click(function(){
+        var flag = 1;
+        $(".sound").click(function () {
             $(this).toggleClass("play");
-            if(flag==1){
+            if (flag == 1) {
                 $("#sound")[0].pause();
-                flag=0;
-            }else{
+                flag = 0;
+            } else {
                 $("#sound")[0].play();
-                flag=1;
+                flag = 1;
             }
         });
     })
