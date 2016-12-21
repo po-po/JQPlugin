@@ -99,10 +99,10 @@ img {
 }*/
 .corner{
     position: absolute;
-    top: .1rem;
-    right: .1rem;
-    bottom: .1rem;
-    left: .1rem;
+    top: .15rem;
+    right: .15rem;
+    bottom: .15rem;
+    left: .15rem;
     pointer-events: none;
 }
 .corner i{
