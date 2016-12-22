@@ -93,10 +93,6 @@ img {
     background: url("../images/bg.jpg") center;
     background-size: cover;
 }
-/*.swiper-container .swiper-slide{
-    background: url("../images/bg.jpg") center;
-    background-size: cover;
-}*/
 .corner{
     position: absolute;
     top: .15rem;
