@@ -26,16 +26,16 @@ next:".next"           //下一页按钮
 ```javascript
 //日期时间选择
 $(".datetime-1").popodatetime({
-  container: ".box .screen"
+container: ".box .screen"
 });
 //日期选择
 $(".datetime-2").popodatetime({
-  container: ".box .screen",
-  time: false
+container: ".box .screen",
+time: false
 });
 //时间选择
 $(".datetime-3").popodatetime({
-  container: ".box .screen",
-  date: false
+container: ".box .screen",
+date: false
 });
 ```
